@@ -1,11 +1,26 @@
 <html>
 <head>
-	<title>Asteroids | Narbe Voskanian</title>
-	<script type="text/javascript" src="./lib/movingObject.js"></script>
+	<title>Ace | Narbe Voskanian</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="application/javascript" src="lib/util.js"></script>
+  <script type="application/javascript" src="lib/movingObject.js"></script>
+  <script type="application/javascript" src="lib/hostile.js"></script>
+  <script type="application/javascript" src="lib/game.js"></script>
+  <script type="application/javascript" src="lib/gameView.js"></script>
 </head>
 
 <body>
-	<canvas></canvas> 
-
+	<canvas id="game-canvas"></canvas> 
+<script>
+(function () {
+	var canvasEl = document.getElementById("game-canvas");
+	canvasEl.width = Ace.Game.DIM_X;
+	canvasEl.height = Ace.Game.DIM_Y;
+	// hostile = new Ace.Hostile();
+	var ctx = canvasEl.getContext("2d");
+  var game = new Ace.Game();
+	new Ace.GameView(game, ctx).start();
+})();
+</script>
 </body>
 </html>
