@@ -11,16 +11,19 @@
 </head>
 
 <body>
-	<canvas id="game-canvas"></canvas>
+		<canvas id="paint-canvas"></canvas>
+		<canvas id="game-canvas"></canvas>
 <script>
 (function () {
-	var canvasEl = document.getElementById("game-canvas");
-	canvasEl.width = Ace.Game.DIM_X;
-	canvasEl.height = Ace.Game.DIM_Y;
-	// hostile = new Ace.Hostile();
-	var ctx = canvasEl.getContext("2d");
+	var canvasEls = document.getElementsByTagName("canvas");
+	Array.prototype.forEach.call(canvasEls, function(canvas){
+		canvas.width = Ace.Game.DIM_X
+		canvas.height = Ace.Game.DIM_Y
+	})
+	var gameCtx = canvasEls[0].getContext("2d");
+	var paintCtx = canvasEls[1].getContext("2d");
   var game = new Ace.Game();
-	new Ace.GameView(game, ctx).start();
+	new Ace.GameView(game, gameCtx, paintCtx).start();
 })();
 </script>
 </body>
