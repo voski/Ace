@@ -2,7 +2,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	z-index: 1;
+	z-index: 0;
 }
 
 #paint-canvas {
@@ -12,7 +12,37 @@
 	z-index: 1;
 }
 
-body{
+canvas {
+	pointer-events: none;
+}
+
+body {
 	background-color: black;
 	/*position:relative;*/
 }
+
+#controls {
+	border-radius: 5px;
+	max-width: 200;
+	background-color: white;
+	z-index: 0;
+}
+
+#controls form  {
+	text-align: center;
+	padding: 10px;
+}
+
+#controls:hover {
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+}
+
+#controls:active {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+}
+/*
+#controls:click {
+	cursor: grabbing;
+}*/
