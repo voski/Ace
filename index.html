@@ -18,7 +18,7 @@
   <script type="application/javascript" src="lib/game.js"></script>
   <script type="application/javascript" src="lib/gameView.js"></script>
   <script type="application/javascript" src="lib/rod.js"></script>
-  <script type="application/javascript" src="lib/color.js"></script>
+  <script type="application/javascript" src="lib/gradient.js"></script>
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 	<!--   <script type="application/javascript" src="lib/hypo.js"></script> -->
 </head>
@@ -27,32 +27,35 @@
 	<canvas id="game-canvas"></canvas>
 	<canvas id="paint-canvas"></canvas>
 	<div id="controls">
-		<form class="" action="#">
-			<fieldset class="hypo-set">
-				<legend>Hypo</legend>
-				<label for="speed">Speed
-					<input id="speed">
-				</label>
-			</fieldset>
-			<fieldset class="plane-set">
-				<legend>Plane</legend>
-				<label for="display-plane">
-					<input type="checkbox" id="display-plane">Display
-				</label>
-			</fieldset>
-			<fieldset>
-				<legend>Hyper</legend>
-				<input type="input" name="name" value="">
-			</fieldset>
-			<fieldset>
-				<legend>Rod</legend>
-				<input type="input" name="name" value="">
-			</fieldset>
-			<fieldset>
-				<legend>Color</legend>
-				<input type="input" name="name" value="">
-			</fieldset>
-		</form>
+		<!-- controls for hypo -->
+		<fieldset class="hypo-set">
+			<legend>Hypo</legend>
+			<label for="speed">Speed
+				<input type="number" min="1" id="speed">
+			</label>
+		</fieldset>
+		<!-- controls for plane -->
+		<fieldset class="plane-set">
+			<legend>Plane</legend>
+			<label for="display-plane">
+				<button id="plane-toggle"></button>
+			</label>
+		</fieldset>
+		<!-- controls for hyper -->
+		<fieldset>
+			<legend>Hyper</legend>
+			<input type="input"  value="">
+		</fieldset>
+		<!-- controls for rod -->
+		<fieldset>
+			<legend>Rod</legend>
+			<input type="input" >
+		</fieldset>
+		<!-- controls for color -->
+		<fieldset>
+			<legend>Color</legend>
+			<input type="input" value="">
+		</fieldset>
 	</div>
 <script>
 (function () {
@@ -65,7 +68,6 @@
 	var gameCtx = canvasEls[0].getContext("2d");
 	var paintCtx = canvasEls[1].getContext("2d");
   var game = Ace.game = new Ace.Game();
-
 	Ace.Menu.initialize();
 	new Ace.GameView(game, gameCtx, paintCtx).start(Ace.Plane.Steps);
 })();
