@@ -24,7 +24,7 @@ body {
 #controls {
 	border-radius: 5px;
 	max-width: 200;
-	background-color: white;
+	background-color: #aaa;
 	z-index: 0;
 }
 
