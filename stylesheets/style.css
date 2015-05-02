@@ -29,6 +29,7 @@ body {
 }
 
 #controls form  {
+	width: 90%;
 	text-align: center;
 	padding: 10px;
 }
@@ -41,6 +42,14 @@ body {
 #controls:active {
 	cursor: -webkit-grabbing;
 	cursor: -moz-grabbing;
+}
+
+#controls form fieldset {
+	width: 80%;
+}
+
+#speed {
+	width: 100%
 }
 /*
 #controls:click {

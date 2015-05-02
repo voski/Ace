@@ -1,7 +1,11 @@
 <html>
 <head>
 	<title>Ace | Narbe Voskanian</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.structure.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.css">
+
   <script type="application/javascript" src="vendor/jquery-2.1.3.js"></script>
   <script type="application/javascript" src="vendor/jquery-ui.js"></script>
   <script type="application/javascript" src="vendor/underscore.js"></script>
@@ -23,6 +27,12 @@
 	<canvas id="paint-canvas"></canvas>
 	<div id="controls">
 		<form class="" action="#">
+			<fieldset class="hypo-set">
+				<legend>Hypo</legend>
+				<label for="speed">Speed
+					<input id="speed">
+				</label>
+			</fieldset>
 			<fieldset class="plane-set">
 				<legend>Plane</legend>
 				<label for="display-plane">
@@ -45,7 +55,6 @@
 	</div>
 <script>
 (function () {
-	// $("#controls").draggable()
 
 	var canvasEls = document.getElementsByTagName("canvas");
 	Array.prototype.forEach.call(canvasEls, function(canvas){
@@ -56,8 +65,8 @@
 	var paintCtx = canvasEls[1].getContext("2d");
   var game = Ace.game = new Ace.Game();
 
-	new Ace.Menu();
-	new Ace.GameView(game, gameCtx, paintCtx).start(20);
+	Ace.Menu.initialize();
+	new Ace.GameView(game, gameCtx, paintCtx).start(Ace.Plane.Steps);
 })();
 </script>
 </body>
