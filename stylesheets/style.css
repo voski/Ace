@@ -22,7 +22,7 @@ body {
 
 #controls {
 	border-radius: 5px;
-	max-width: 200;
+	max-width: 220;
 	background-color: #aaa;
 	z-index: 0;
 	text-align: center;
@@ -47,10 +47,7 @@ body {
 	width: 80%;
 }
 
-#speed {
-	width: 100%
+
+#plane-toggle {
+	padding: 20px;
 }
-/*
-#controls:click {
-	cursor: grabbing;
-}*/

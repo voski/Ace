@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Ace | Narbe Voskanian</title>
+	<link rel="icon" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.structure.css">
@@ -30,31 +31,33 @@
 		<!-- controls for hypo -->
 		<fieldset class="hypo-set">
 			<legend>Hypo</legend>
-			<label for="speed">Speed
-				<input type="number" min="1" id="speed">
-			</label>
+			<label for="speed">Speed</label>
+			<input type="number" min="1" id="speed">
+
 		</fieldset>
 		<!-- controls for plane -->
 		<fieldset class="plane-set">
 			<legend>Plane</legend>
-			<label for="display-plane">
-				<button id="plane-toggle"></button>
-			</label>
+			<label for="hypo-drift">Drift</label>
+			<input type="number" min="1" id="hypo-drift">
+			<button id="plane-toggle"></button>
 		</fieldset>
 		<!-- controls for hyper -->
 		<fieldset>
 			<legend>Hyper</legend>
-			<input type="input"  value="">
+			<label for="hyper-drift">Drift</label>
+			<input type="number" min="1" id="hyper-drift">
 		</fieldset>
 		<!-- controls for rod -->
 		<fieldset>
 			<legend>Rod</legend>
-			<input type="input" >
+			<label for="rod-drift">Drift</label>
+			<input type="number" min="1" id="rod-drift">
 		</fieldset>
 		<!-- controls for color -->
 		<fieldset>
 			<legend>Color</legend>
-			<input type="input" value="">
+
 		</fieldset>
 	</div>
 <script>
