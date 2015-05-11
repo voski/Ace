@@ -28,7 +28,7 @@
 	<canvas id="game-canvas"></canvas>
 	<canvas id="paint-canvas"></canvas>
 	<div id="controls">
-
+		<!-- general -->
 		<fieldset class="general">
 			<legend>General</legend>
 			<label for="dim-x">X dim</label>
@@ -37,8 +37,8 @@
 			<input type="number" min="1" id="dim-y">
 			<label for="steps">Steps</label>
 			<input type="number" min="1" id="steps">
-			<button type="button" name="button">Start</button>
-			<button type="button" name="button">Clear</button>
+			<button type="button" class="start-stop-btn">Start</button>
+			<button type="button" class="clear-btn">Clear</button>
 		</fieldset>
 		<!-- controls for hypo -->
 		<fieldset class="hypo-set">
@@ -83,8 +83,9 @@
 	var gameCtx = canvasEls[0].getContext("2d");
 	var paintCtx = canvasEls[1].getContext("2d");
   var game = Ace.game = new Ace.Game();
-	Ace.Menu.initialize();
-	new Ace.GameView(game, gameCtx, paintCtx).start(Ace.Plane.Steps);
+	var gameView = new Ace.GameView(game, gameCtx, paintCtx)
+	gameView.start(Ace.Plane.Steps);
+	Ace.Menu.initialize(gameView);
 })();
 </script>
 </body>
