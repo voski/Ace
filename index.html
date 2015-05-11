@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Ace | Narbe Voskanian</title>
+	<title>Hypo</title>
 	<link rel="icon" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css">
@@ -28,6 +28,18 @@
 	<canvas id="game-canvas"></canvas>
 	<canvas id="paint-canvas"></canvas>
 	<div id="controls">
+
+		<fieldset class="general">
+			<legend>General</legend>
+			<label for="dim-x">X dim</label>
+			<input type="number" min="1" id="dim-x">
+			<label for="dim-y">Y dim</label>
+			<input type="number" min="1" id="dim-y">
+			<label for="steps">Steps</label>
+			<input type="number" min="1" id="steps">
+			<button type="button" name="button">Start</button>
+			<button type="button" name="button">Clear</button>
+		</fieldset>
 		<!-- controls for hypo -->
 		<fieldset class="hypo-set">
 			<legend>Hypo</legend>

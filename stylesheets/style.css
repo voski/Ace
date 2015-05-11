@@ -22,7 +22,9 @@ body {
 
 #controls {
 	border-radius: 5px;
-	max-width: 220;
+	/*max-width: 220px;*/
+	width: 15%;
+	min-width: 215px;
 	background-color: #aaa;
 	z-index: 0;
 	text-align: center;
