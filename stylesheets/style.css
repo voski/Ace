@@ -22,18 +22,13 @@ body {
 
 #controls {
 	border-radius: 5px;
-	/*max-width: 220px;*/
+	max-width: 220px;
 	width: 15%;
 	min-width: 215px;
-	background-color: #aaa;
 	z-index: 0;
 	text-align: center;
 }
 
-#controls form  {
-	width: 90%;
-	padding: 10px;
-}
 
 #controls:hover {
 	cursor: -webkit-grab;
@@ -45,11 +40,56 @@ body {
 	cursor: -moz-grabbing;
 }
 
-#controls form fieldset {
-	width: 80%;
+
+label {
+	font-size: 1.1em;
+	color: cornflowerblue;
 }
 
+hr	{
+	margin-top: -5px;
+	border: 1px solid navajowhite;
+}
 
-#plane-toggle {
-	padding: 20px;
+input.spinner {
+	border-bottom: 1px solid navajowhite;
+	width: 80px;
+}
+
+button.waves-light {
+	font-size: 12px;
+	padding: 0 10 0 10;
+	text
+}
+
+.control-inputs {
+	text-align: left;
+	margin-bottom: -20px;
+}
+
+.center {
+	margin: 0 auto;
+}
+
+input	{
+	text-align: center;
+	width: 100px;
+	color: cornflowerblue;
+}
+
+fieldset {
+	text-align: center;
+	border: none;
+}
+legend {
+	border-bottom: none;
+	text-align: left;
+	font-size: 1.2em;
+	color: navajowhite;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
 }

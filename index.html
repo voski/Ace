@@ -2,6 +2,7 @@
 <head>
 	<title>Hypo</title>
 	<link rel="icon" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="stylesheets/materialize.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.theme.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui.structure.css">
@@ -20,56 +21,56 @@
   <script type="application/javascript" src="lib/gameView.js"></script>
   <script type="application/javascript" src="lib/rod.js"></script>
   <script type="application/javascript" src="lib/gradient.js"></script>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-	<!--   <script type="application/javascript" src="lib/hypo.js"></script> -->
 </head>
 
 <body>
 	<canvas id="game-canvas"></canvas>
 	<canvas id="paint-canvas"></canvas>
-	<div id="controls">
+	<div id="controls" class="blue-grey darken-4">
 		<!-- general -->
-		<fieldset class="general">
-			<legend>General</legend>
-			<label for="dim-x">X dim</label>
-			<input type="number" min="1" id="dim-x">
-			<label for="dim-y">Y dim</label>
-			<input type="number" min="1" id="dim-y">
-			<label for="steps">Steps</label>
-			<input type="number" min="1" id="steps">
-			<button type="button" class="start-stop-btn">Start</button>
-			<button type="button" class="clear-btn">Clear</button>
+		<fieldset class="general group">
+			<legend>General</legend><hr>
+			<div class="control-inputs">
+				<label for="steps">Steps</label>
+				<input type="number" min="1" id="steps" class="spinner">
+			</div><br>
+			<button type="button" class="start-stop-btn waves-effect waves-light btn">Stop</button>
+			<button type="button" class="clear-btn waves-effect waves-light btn">Clear</button>
 		</fieldset>
 		<!-- controls for hypo -->
 		<fieldset class="hypo-set">
 			<legend>Hypo</legend>
+			<hr>
 			<label for="speed">Speed</label>
-			<input type="number" min="1" id="speed">
+			<input type="number" min="1" id="speed" class="spinner">
 
 		</fieldset>
 		<!-- controls for plane -->
 		<fieldset class="plane-set">
 			<legend>Plane</legend>
+			<hr>
 			<label for="hypo-drift">Drift</label>
-			<input type="number" min="1" id="hypo-drift">
-			<button id="plane-toggle"></button>
+			<input type="number" min="1" id="hypo-drift" class="spinner"><br>
+			<button id="plane-toggle" class="waves-effect waves-light btn"></button>
 		</fieldset>
 		<!-- controls for hyper -->
 		<fieldset>
 			<legend>Hyper</legend>
+			<hr>
 			<label for="hyper-drift">Drift</label>
-			<input type="number" min="1" id="hyper-drift">
+			<input type="number" min="1" id="hyper-drift" class="spinner">
 		</fieldset>
 		<!-- controls for rod -->
 		<fieldset>
 			<legend>Rod</legend>
+			<hr>
 			<label for="rod-drift">Drift</label>
-			<input type="number" min="1" id="rod-drift">
+			<input type="number" min="1" id="rod-drift" class="spinner">
 		</fieldset>
 		<!-- controls for color -->
 		<fieldset>
 			<legend>Color</legend>
-
+			<hr>
 		</fieldset>
 	</div>
 <script>
